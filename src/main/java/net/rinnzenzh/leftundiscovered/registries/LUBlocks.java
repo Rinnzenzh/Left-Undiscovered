@@ -4,15 +4,16 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.references.BlockItemId;
-import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockBehaviour.*;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.rinnzenzh.leftundiscovered.LeftUndiscovered;
 
@@ -23,6 +24,21 @@ public class LUBlocks {
 
     public static Block KARBIUM = register("karbium", settings -> new Block(
                     BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).strength(5F, 6F).mapColor(MapColor.COLOR_CYAN).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK).setId(settings.blockId())));
+
+    public static Block RORIAL_CRYTSAL_BLOCK = register("rorial_crystal_block", settings -> new RotatedPillarBlock(
+            Properties.of()
+                    .instrument(NoteBlockInstrument.HAT)
+                    .sound(SoundType.GLASS)
+                    .noOcclusion()
+                    .isValidSpawn(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .isRedstoneConductor(Blocks::never)
+                    .strength(0.5F)
+                    .lightLevel((bs) -> 12)
+                    .mapColor(MapColor.COLOR_RED)
+                    .setId(settings.blockId())
+    ));
 
     public static Block register(String name, Function<Properties, Block> factory) {
         return register(name, factory, true);
