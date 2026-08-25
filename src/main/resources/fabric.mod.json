@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "left_undiscovered",
+  "version": "${version}",
+  "name": "Left Undiscovered",
+  "description": "",
+  "authors": [
+    "Rinnzenzh (Main Dev)"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/left_undiscovered/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "net.rinnzenzh.leftundiscovered.datagen.LeftUndiscoveredDataGenerator"
+    ],
+    "client": [
+      "net.rinnzenzh.leftundiscovered.client.LeftUndiscoveredClient"
+    ],
+    "main": [
+      "net.rinnzenzh.leftundiscovered.LeftUndiscovered"
+    ]
+  },
+  "mixins": [
+    "left_undiscovered.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
