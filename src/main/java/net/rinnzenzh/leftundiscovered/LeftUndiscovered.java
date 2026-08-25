@@ -2,6 +2,7 @@ package net.rinnzenzh.leftundiscovered;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.Identifier;
+import net.rinnzenzh.leftundiscovered.registries.LUBlocks;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,5 +17,6 @@ public class LeftUndiscovered implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        LUBlocks.init();
     }
 }
