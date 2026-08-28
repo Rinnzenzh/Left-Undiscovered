@@ -26,6 +26,8 @@ public class LUItems {
 
     public static Map<Item, ResourceKey<Item>> idLookup = new HashMap<>();
 
+    public static final Item RORIAL_CRYSTAL = register("rorial_crystal");
+
     public static Item register(String name) {
         return register(name, new Properties());
     }
@@ -51,6 +53,6 @@ public class LUItems {
         idLookup.put(item, id);
         return Registry.register(BuiltInRegistries.ITEM, id, item);
     }
-    public static void initialize() {
+    public static void init() {
     }
 }
