@@ -1,6 +1,5 @@
-package net.rinnzenzh.leftundiscovered.world.feature.end.placement;
+package net.rinnzenzh.leftundiscovered.world.feature.end;
 
-import com.mojang.serialization.Codec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;

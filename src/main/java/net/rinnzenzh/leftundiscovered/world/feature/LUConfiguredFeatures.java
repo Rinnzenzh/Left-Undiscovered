@@ -12,7 +12,7 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.rinnzenzh.leftundiscovered.LeftUndiscovered;
-import net.rinnzenzh.leftundiscovered.world.feature.end.placement.FloatingRorialCrystals;
+import net.rinnzenzh.leftundiscovered.world.feature.end.FloatingRorialCrystals;
 
 import java.util.ArrayList;
 import java.util.List;
