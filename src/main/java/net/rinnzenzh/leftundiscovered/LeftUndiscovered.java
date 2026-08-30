@@ -5,6 +5,9 @@ import net.minecraft.resources.Identifier;
 import net.rinnzenzh.leftundiscovered.registries.LUBlocks;
 import net.rinnzenzh.leftundiscovered.registries.LUItems;
 //import net.rinnzenzh.leftundiscovered.registries.LUTab;
+import net.rinnzenzh.leftundiscovered.world.LUGenerator;
+import net.rinnzenzh.leftundiscovered.world.feature.LUConfiguredFeatures;
+import net.rinnzenzh.leftundiscovered.world.feature.LUPlacedFeatures;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,5 +25,7 @@ public class LeftUndiscovered implements ModInitializer {
         LUBlocks.init();
         LUItems.init();
         //LUTab.init();
+        LUConfiguredFeatures.init();
+        LUGenerator.addCustomFeaturesToExistingBiomes();
     }
 }
