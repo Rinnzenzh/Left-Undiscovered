@@ -1,4 +1,4 @@
-package net.rinnzenzh.leftundiscovered.datagen;
+package net.rinnzenzh.everlastingdusk.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
@@ -9,11 +9,11 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 
 import java.util.concurrent.CompletableFuture;
 
-import static net.rinnzenzh.leftundiscovered.world.feature.LUConfiguredFeatures.CONFIGURED_FEATURES;
+import static net.rinnzenzh.everlastingdusk.world.feature.EverlastingDuskConfiguredFeatures.CONFIGURED_FEATURES;
 
-public class LUConfiguredFeaturesProvider extends FabricDynamicRegistryProvider {
+public class EverlastingDuskConfiguredFeaturesProvider extends FabricDynamicRegistryProvider {
 
-    public LUConfiguredFeaturesProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> future) {
+    public EverlastingDuskConfiguredFeaturesProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> future) {
         super(output, future);
     }
 

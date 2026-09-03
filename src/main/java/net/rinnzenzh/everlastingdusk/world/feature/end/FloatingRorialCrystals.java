@@ -1,4 +1,4 @@
-package net.rinnzenzh.leftundiscovered.world.feature.end;
+package net.rinnzenzh.everlastingdusk.world.feature.end;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -13,8 +13,8 @@ import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
-import net.rinnzenzh.leftundiscovered.misc.AllPurposeUtility;
-import net.rinnzenzh.leftundiscovered.registries.LUBlocks;
+import net.rinnzenzh.everlastingdusk.misc.AllPurposeUtility;
+import net.rinnzenzh.everlastingdusk.registries.EverlastingDuskBlocks;
 
 public class FloatingRorialCrystals extends Feature<NoneFeatureConfiguration> {
 
@@ -40,9 +40,9 @@ public class FloatingRorialCrystals extends Feature<NoneFeatureConfiguration> {
             }
         }
         BlockStateProvider pillarProviderForTheCrystalFeatureThatHasAnExtremelyLongNameForNoParticularReasonAtAllThisIsJustToConfuseSomePeopleSoYeahIdSayThisEndsHere = new WeightedStateProvider(WeightedList.<BlockState>builder()
-                .add(LUBlocks.RORIAL_CRYSTAL_PILLAR_WITH_COLOR.get(DyeColor.BLUE).defaultBlockState(), 2)
-                .add(LUBlocks.RORIAL_CRYSTAL_PILLAR_WITH_COLOR.get(DyeColor.PURPLE).defaultBlockState(), 2)
-                .add(LUBlocks.RORIAL_CRYSTAL_PILLAR_WITH_COLOR.get(DyeColor.MAGENTA).defaultBlockState(), 2)
+                .add(EverlastingDuskBlocks.RORIAL_CRYSTAL_PILLAR_WITH_COLOR.get(DyeColor.BLUE).defaultBlockState(), 2)
+                .add(EverlastingDuskBlocks.RORIAL_CRYSTAL_PILLAR_WITH_COLOR.get(DyeColor.PURPLE).defaultBlockState(), 2)
+                .add(EverlastingDuskBlocks.RORIAL_CRYSTAL_PILLAR_WITH_COLOR.get(DyeColor.MAGENTA).defaultBlockState(), 2)
                 .build());
 
         BlockState pillarBlockVariableThatAlsoHasALongNameButNotAsLongAsTheProvidersName = pillarProviderForTheCrystalFeatureThatHasAnExtremelyLongNameForNoParticularReasonAtAllThisIsJustToConfuseSomePeopleSoYeahIdSayThisEndsHere.getState(level, random, center);

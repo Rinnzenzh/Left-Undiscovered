@@ -1,4 +1,4 @@
-package net.rinnzenzh.leftundiscovered.world.feature;
+package net.rinnzenzh.everlastingdusk.world.feature;
 
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.Registry;
@@ -11,22 +11,32 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
-import net.rinnzenzh.leftundiscovered.LeftUndiscovered;
-import net.rinnzenzh.leftundiscovered.world.feature.end.FloatingRorialCrystals;
+import net.rinnzenzh.everlastingdusk.EverlastingDusk;
+import net.rinnzenzh.everlastingdusk.world.feature.end.FloatingRorialCrystals;
+import net.rinnzenzh.everlastingdusk.world.feature.overworld.SpiralFeature;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class LUConfiguredFeatures {
+public class EverlastingDuskConfiguredFeatures {
 
     public static final List<ResourceKey<ConfiguredFeature<?, ?>>> CONFIGURED_FEATURES = new ArrayList<>();
 
     public static final Feature<NoneFeatureConfiguration> FLOATING_RORIAL_CRYTSALS_END_FEATURE = Registry.register(
             BuiltInRegistries.FEATURE,
-            LeftUndiscovered.of("ender_rorial_crystals"),
+            EverlastingDusk.of("ender_rorial_crystals"),
             new FloatingRorialCrystals());
     public static final ResourceKey<ConfiguredFeature<?, ?>> FLOATING_RORIAL_CRYTSALS_END = of(
             "ender_rorial_crystals");
+
+    public static final Feature<NoneFeatureConfiguration> SPIRAL_TREE_FEATURE = Registry.register(
+            BuiltInRegistries.FEATURE,
+            EverlastingDusk.of("spiral_tree"),
+            new SpiralFeature()
+    );
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SPIRAL_TREE_OAK = of(
+            "spiral_tree_oak");
 
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -35,14 +45,22 @@ public class LUConfiguredFeatures {
         );
         HolderGetter<Block> blocks = context.lookup(Registries.BLOCK);
 
-        FeatureUtils.register(context, FLOATING_RORIAL_CRYTSALS_END, FLOATING_RORIAL_CRYTSALS_END_FEATURE);
+        FeatureUtils.register(
+                context,
+                FLOATING_RORIAL_CRYTSALS_END,
+                FLOATING_RORIAL_CRYTSALS_END_FEATURE);
 
+        FeatureUtils.register(
+                context,
+                SPIRAL_TREE_OAK,
+                SPIRAL_TREE_FEATURE
+        );
     }
 
     public static void init() {
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> of(String id) {
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, LeftUndiscovered.of(id));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, EverlastingDusk.of(id));
     }
 }

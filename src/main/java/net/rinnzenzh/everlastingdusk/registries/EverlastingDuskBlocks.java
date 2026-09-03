@@ -1,4 +1,4 @@
-package net.rinnzenzh.leftundiscovered.registries;
+package net.rinnzenzh.everlastingdusk.registries;
 
 import com.google.common.collect.Maps;
 import net.minecraft.core.Registry;
@@ -17,13 +17,13 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockBehaviour.*;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
-import net.rinnzenzh.leftundiscovered.LeftUndiscovered;
+import net.rinnzenzh.everlastingdusk.EverlastingDusk;
 
 import java.util.Map;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
-public class LUBlocks {
+public class EverlastingDuskBlocks {
 
     public static Block KARBIUM = register("karbium", settings -> new Block(
                     BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).strength(5F, 6F).mapColor(MapColor.COLOR_CYAN).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK).setId(settings.blockId())));
@@ -69,9 +69,9 @@ public class LUBlocks {
             boolean hasItem
     ) {
         if (hasItem) {
-            BlockItemId id = BlockItemId.create(LeftUndiscovered.of(name), LeftUndiscovered.of(name));
+            BlockItemId id = BlockItemId.create(EverlastingDusk.of(name), EverlastingDusk.of(name));
             Block block = factory.apply(settings.setId(id.block()));
-            LUItems.register(
+            EverlastingDuskItems.register(
                     id.item(),
                     new BlockItem(
                             block,
@@ -83,7 +83,7 @@ public class LUBlocks {
             );
             return Registry.register(BuiltInRegistries.BLOCK, id.block(), block);
         }
-        ResourceKey<Block> id = ResourceKey.create(Registries.BLOCK, LeftUndiscovered.of(name));
+        ResourceKey<Block> id = ResourceKey.create(Registries.BLOCK, EverlastingDusk.of(name));
         Block block = factory.apply(settings.setId(id));
         return Registry.register(BuiltInRegistries.BLOCK, id, block);
     }
@@ -102,9 +102,9 @@ public class LUBlocks {
             Function<Properties, Block> factory,
             BiFunction<Block, BlockItemId, BlockItem> itemFactory
     ) {
-        BlockItemId id = BlockItemId.create(LeftUndiscovered.of(blockName), LeftUndiscovered.of(itemName));
+        BlockItemId id = BlockItemId.create(EverlastingDusk.of(blockName), EverlastingDusk.of(itemName));
         Block block = factory.apply(Properties.of().setId(id.block()));
-        LUItems.register(id.item(), itemFactory.apply(block, id));
+        EverlastingDuskItems.register(id.item(), itemFactory.apply(block, id));
         return Registry.register(BuiltInRegistries.BLOCK, id.block(), block);
     }
 

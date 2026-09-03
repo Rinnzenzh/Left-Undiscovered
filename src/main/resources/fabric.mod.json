@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "left_undiscovered",
+  "id": "everlasting_dusk",
   "version": "${version}",
-  "name": "Left Undiscovered",
+  "name": "Everlasting Dusk",
   "description": "Probably the Worst Mod i've ever made.",
   "authors": [
     "Rinnzenzh (Main Dev)"
   ],
   "contact": {},
   "license": "MIT",
-  "icon": "assets/left_undiscovered/icon.png",
+  "icon": "assets/everlasting_dusk/icon.png",
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
-      "net.rinnzenzh.leftundiscovered.datagen.LeftUndiscoveredDataGenerator"
+      "net.rinnzenzh.everlastingdusk.datagen.EverlastingDuskDataGenerator"
     ],
     "client": [
-      "net.rinnzenzh.leftundiscovered.client.LeftUndiscoveredClient"
+      "net.rinnzenzh.everlastingdusk.client.EverlastingDuskClient"
     ],
     "main": [
-      "net.rinnzenzh.leftundiscovered.LeftUndiscovered"
+      "net.rinnzenzh.everlastingdusk.EverlastingDusk"
     ]
   },
   "mixins": [
-    "left_undiscovered.mixins.json"
+    "everlasting_dusk.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",

@@ -1,4 +1,4 @@
-package net.rinnzenzh.leftundiscovered.misc;
+package net.rinnzenzh.everlastingdusk.misc;
 
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;

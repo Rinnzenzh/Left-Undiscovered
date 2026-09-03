@@ -1,4 +1,4 @@
-package net.rinnzenzh.leftundiscovered.world;
+package net.rinnzenzh.everlastingdusk.world;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -8,12 +8,12 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
-import net.rinnzenzh.leftundiscovered.world.feature.LUPlacedFeatures;
+import net.rinnzenzh.everlastingdusk.world.feature.EverlastingDuskPlacedFeatures;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class LUGenerator {
+public class EverlastingDuskGen {
 
 
     public static void addCustomFeaturesToExistingBiomes() {
@@ -41,7 +41,7 @@ public class LUGenerator {
         BiomeModifications.addFeature(
                 BiomeSelectors.includeByKey(aerialBiomes),
                 GenerationStep.Decoration.SURFACE_STRUCTURES,
-                LUPlacedFeatures.FLOATING_RORIAL_CRYTSALS_END
+                EverlastingDuskPlacedFeatures.FLOATING_RORIAL_CRYTSALS_END
         );
     }
 }
